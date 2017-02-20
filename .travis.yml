@@ -8,6 +8,6 @@ install:
   - PATH="$HOME/bin:$PATH"
   - LD_LIBRARY_PATH="$HOME/lib:${LD_LIBRARY_PATH}"
   - export PATH LD_LIBRARY_PATH
-  - gpg2 || ./build-gpg.sh
+  - gpg2 --version | grep 'gpg (GnuPG) 2.1.18' || ./build-gpg.sh
 script:
   - gpg2 --version
