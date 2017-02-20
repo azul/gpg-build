@@ -4,10 +4,11 @@ cache:
   directories:
     - $HOME/bin
     - $HOME/lib
+env: GPG_VERSION='2.1.18'
 install:
   - PATH="$HOME/bin:$PATH"
   - LD_LIBRARY_PATH="$HOME/lib:${LD_LIBRARY_PATH}"
   - export PATH LD_LIBRARY_PATH
-  - gpg2 --version | grep 'gpg (GnuPG) 2.1.18' || ./build-gpg.sh
+  - gpg2 --version | grep "gpg (GnuPG) $GPG_VERSION" || ./build-gpg.sh
 script:
-  - gpg2 --version
+  - gpg2 --version | grep "gpg (GnuPG) $GPG_VERSION"
