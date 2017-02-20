@@ -10,5 +10,9 @@ script:
   - export PATH LD_LIBRARY_PATH
   - ls
   - cd gnupg-2.1.18
+  - export urlbase="https://versions.gnupg.org/"
+  - wget --version
+  - wget -O swdb.lst "$urlbase/swdb.lst"
+  - build-aux/getswdb.sh
   - make -f build-aux/speedo.mk native INSTALL_PREFIX="$HOME"
   - gpg2 --version
