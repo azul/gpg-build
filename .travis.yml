@@ -8,6 +8,7 @@ script:
   - PATH="$HOME/bin:$PATH"
   - LD_LIBRARY_PATH="$HOME/lib:${LD_LIBRARY_PATH}"
   - export PATH LD_LIBRARY_PATH
-  - cd src/gnupg-2.1.18
+  - ls
+  - cd gnupg-2.1.18
   - make -f build-aux/speedo.mk native INSTALL_PREFIX="$HOME"
   - gpg2 --version
