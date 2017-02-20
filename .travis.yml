@@ -1,5 +1,9 @@
 language: c
 dist: trusty
+cache:
+  directories:
+    - $HOME/bin
+    - $HOME/lib
 install:
   - PATH="$HOME/bin:$PATH"
   - LD_LIBRARY_PATH="$HOME/lib:${LD_LIBRARY_PATH}"
