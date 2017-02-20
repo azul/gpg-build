@@ -5,6 +5,8 @@ cache:
     - $HOME/bin
     - $HOME/lib
 env: GPG_VERSION='2.1.18'
+notifications:
+  email: false
 install:
   - PATH="$HOME/bin:$PATH"
   - LD_LIBRARY_PATH="$HOME/lib:${LD_LIBRARY_PATH}"
